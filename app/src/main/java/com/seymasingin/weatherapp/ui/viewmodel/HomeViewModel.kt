@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import com.seymasingin.data.model.Location
 import com.seymasingin.data.model.WeatherData
 import com.seymasingin.retrofit.ApiUtils
+import com.seymasingin.weatherapp.R
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.observers.DisposableSingleObserver
@@ -15,6 +16,9 @@ class HomeViewModel: ViewModel() {
         private val apiUtils = ApiUtils()
         private val disposable = CompositeDisposable()
 
+    fun getDefaultWeather() {
+        getWeatherViewModel("London")
+    }
 
 fun getWeatherViewModel(location: String){
         disposable.add(
@@ -30,5 +34,13 @@ fun getWeatherViewModel(location: String){
                     }
                 })
         )
+    }
+
+    fun getWeatherConditionBackground(tempC: Double): Int {
+        return when {
+            tempC > 30 -> R.drawable.sunny
+            tempC in 20.0..30.0 -> R.drawable.cloud
+            else -> R.drawable.rainy
+        }
     }
 }

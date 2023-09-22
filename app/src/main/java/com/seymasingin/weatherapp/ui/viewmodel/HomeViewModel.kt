@@ -2,9 +2,9 @@ package com.seymasingin.weatherapp.ui.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.seymasingin.data.model.Location
-import com.seymasingin.data.model.WeatherData
-import com.seymasingin.retrofit.ApiUtils
+import com.seymasingin.weatherapp.data.model.Location
+import com.seymasingin.weatherapp.data.model.WeatherData
+import com.seymasingin.weatherapp.retrofit.ApiUtils
 import com.seymasingin.weatherapp.R
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.disposables.CompositeDisposable

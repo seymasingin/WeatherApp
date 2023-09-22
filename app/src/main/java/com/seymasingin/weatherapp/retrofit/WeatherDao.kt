@@ -1,7 +1,7 @@
-package com.seymasingin.retrofit
+package com.seymasingin.weatherapp.retrofit
 
 
-import com.seymasingin.data.model.WeatherData
+import com.seymasingin.weatherapp.data.model.WeatherData
 import io.reactivex.rxjava3.core.Single
 import retrofit2.http.GET
 import retrofit2.http.Query

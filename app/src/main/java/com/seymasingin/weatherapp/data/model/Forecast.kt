@@ -1,4 +1,4 @@
-package com.seymasingin.data.model
+package com.seymasingin.weatherapp.data.model
 
 data class Forecast (
     val forecastday: List<ForecastDay>

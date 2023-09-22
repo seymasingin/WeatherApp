@@ -9,10 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
-import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.Observer
-import com.canerture.navigationcomponent.common.viewBinding
-import com.seymasingin.weatherapp.R
 import com.seymasingin.weatherapp.databinding.FragmentHomeBinding
 import com.seymasingin.weatherapp.ui.viewmodel.HomeViewModel
 import java.time.LocalDate

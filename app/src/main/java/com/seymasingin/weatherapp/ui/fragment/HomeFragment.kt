@@ -51,8 +51,8 @@ private val viewModel by lazy { HomeViewModel()}
                 binding.textWeather.text = it.current.temp_c.toString()
                 val tempC = it.current.temp_c
                 val backgroundPic = viewModel.getWeatherConditionBackground(tempC)
-                binding.homeBackground.setBackgroundResource(backgroundPic)
 
+                binding.homeBackground.setBackgroundResource(backgroundPic)
                 binding.dayOneMax.text = it.forecast.forecastday[0].day.maxtemp_c.toInt().toString()
                 binding.dayOneMin.text = it.forecast.forecastday[0].day.mintemp_c.toInt().toString()
                 binding.dayTwoMax.text = it.forecast.forecastday[1].day.maxtemp_c.toInt().toString()

@@ -54,9 +54,9 @@ private val viewModel by lazy { HomeViewModel()}
                 binding.homeBackground.setBackgroundResource(backgroundPic)
 
                 binding.dayOneMax.text = it.forecast.forecastday[0].day.maxtemp_c.toInt().toString()
-                binding.dayOnemin.text = it.forecast.forecastday[0].day.mintemp_c.toInt().toString()
-                binding.textDayTwo.text = it.forecast.forecastday[1].day.maxtemp_c.toInt().toString()
-                binding.textDayTwo.text = it.forecast.forecastday[1].day.mintemp_c.toInt().toString()
+                binding.dayOneMin.text = it.forecast.forecastday[0].day.mintemp_c.toInt().toString()
+                binding.dayTwoMax.text = it.forecast.forecastday[1].day.maxtemp_c.toInt().toString()
+                binding.dayTwoMin.text = it.forecast.forecastday[1].day.mintemp_c.toInt().toString()
                 val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.getDefault())
 
                 for (i in 0 until 2) {

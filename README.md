@@ -6,4 +6,5 @@ Weather App
 - LiveData
 - ViewModel
 
-![Screenshot_20230922_184046](https://github.com/seymasingin/WeatherApp/assets/113527683/88b21485-6965-4074-94de-4ff07d1a6316)
+![Screenshot_20230922_184046](https://github.com/seymasingin/WeatherApp/assets/113527683/ab24d054-f9ba-42b8-8e51-47b80d697dab)
+

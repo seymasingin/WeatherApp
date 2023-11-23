@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.Observer
+import com.bumptech.glide.Glide
 import com.seymasingin.weatherapp.R
 import com.seymasingin.weatherapp.databinding.FragmentHomeBinding
 import com.seymasingin.weatherapp.ui.adapter.HourAdapter
@@ -60,11 +61,11 @@ class HomeFragment : Fragment() {
                     textCountry.text = it.location.country
                     textCondition.text = it.current.condition.text
                     textWeather.text = it.current.temp_c.toInt().toString()
+                    Glide.with(iconCurrent).load("https:" + it.current.condition.icon).into(iconCurrent)
 
                     iconTheme.setOnClickListener {
                         isNightMode = !isNightMode
                         applyTheme(isNightMode)
-
                     }
 
                     rvHour.adapter = hourAdapter

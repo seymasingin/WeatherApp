@@ -6,5 +6,6 @@ Weather App
 - LiveData
 - ViewModel
 
-![Screenshot_20230922_184046](https://github.com/seymasingin/WeatherApp/assets/113527683/ab24d054-f9ba-42b8-8e51-47b80d697dab)
+# <sub>**Day Mode - Night Mode**</sub>
 
+![weather](https://github.com/seymasingin/WeatherApp/assets/113527683/84bb66b8-7bac-4423-bd4f-fef8b32f2c5f)

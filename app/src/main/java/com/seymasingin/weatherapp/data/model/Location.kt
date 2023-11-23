@@ -1,5 +1,6 @@
 package com.seymasingin.weatherapp.data.model
 
 data class Location(
-    val name: String
+    val name: String,
+    val country: String
 )

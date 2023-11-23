@@ -7,8 +7,10 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class ApiUtils {
+
     val BASE_URL = "http://api.weatherapi.com/v1/"
     val apiKey = "5f84a809fae644b996791850230705"
+
     private val api = Retrofit.Builder().baseUrl(BASE_URL)
                             .addConverterFactory(GsonConverterFactory.create())
                             .addCallAdapterFactory(RxJava3CallAdapterFactory.create())

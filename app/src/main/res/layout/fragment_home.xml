@@ -3,15 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/homeBackground"
+    style="@style/MyIcon"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.fragment.HomeFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHour"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCondition"
+        tools:itemCount="10"
+        tools:listitem="@layout/hour" />
 
     <EditText
         android:id="@+id/textInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Search"
         android:inputType="text"
@@ -25,11 +41,9 @@
         android:id="@+id/textCity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="13dp"
         android:text="London"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textSize="21sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,89 +53,116 @@
         android:id="@+id/textWeather"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="20"
-        android:textSize="110sp"
+        android:textSize="70sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textCity" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
         android:id="@+id/textDayOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginBottom="12dp"
         android:text="Sunday"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textWeather" />
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/textDayTwo"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textDayTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp"
         android:text="Monday"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/textDayOne"
-        app:layout_constraintTop_toBottomOf="@+id/textDayOne" />
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/dayOneMax"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="164dp"
         android:layout_marginEnd="32dp"
         android:text="25"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:textSize="17sp"
         app:layout_constraintEnd_toStartOf="@+id/dayOneMin"
-        app:layout_constraintTop_toBottomOf="@+id/textWeather" />
+        app:layout_constraintTop_toTopOf="@+id/textDayOne" />
 
     <TextView
         android:id="@+id/dayOneMin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="164dp"
         android:layout_marginEnd="32dp"
         android:text="05"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textWeather" />
+        app:layout_constraintTop_toTopOf="@+id/dayOneMax" />
 
     <TextView
         android:id="@+id/dayTwoMax"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
         android:text="23"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/dayOneMax"
-        app:layout_constraintTop_toBottomOf="@+id/dayOneMax" />
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textDayTwo"
+        app:layout_constraintEnd_toStartOf="@+id/dayTwoMin" />
 
     <TextView
         android:id="@+id/dayTwoMin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
         android:text="12"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/dayOneMin"
-        app:layout_constraintTop_toBottomOf="@+id/dayOneMin" />
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/dayTwoMax"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="UK"
+        app:layout_constraintEnd_toEndOf="@+id/textCity"
+        app:layout_constraintStart_toStartOf="@+id/textCity"
+        app:layout_constraintTop_toBottomOf="@+id/textCity" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        style="@style/MyIcon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCountry" />
+
+    <TextView
+        android:id="@+id/textCondition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Mostly sunny"
+        app:layout_constraintEnd_toEndOf="@+id/textWeather"
+        app:layout_constraintStart_toStartOf="@+id/textWeather"
+        app:layout_constraintTop_toBottomOf="@+id/textWeather" />
+
+    <ImageView
+        android:id="@+id/iconTheme"
+        style="@style/MyIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/mode_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
